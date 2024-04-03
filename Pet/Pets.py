@@ -1,4 +1,4 @@
-from Animals import Animals
+from Data.Animals import Animals
 
 
 class Pets(Animals):

@@ -7,7 +7,7 @@ from Pet.Hamsters import Hamsters
 from Pack_animal.Horses import Horses
 from Pack_animal.Camels import Camels
 from Pack_animal.Neddys import Neddys
-from Count import Count
+from Data.Count import Count
 
 
 class App:

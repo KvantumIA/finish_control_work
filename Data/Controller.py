@@ -1,9 +1,13 @@
-from data import App
+from pathlib import Path
+
+from Data.data import App
+from Data.Count import Count
 
 
 class Start_app:
     def __init__(self):
         self.data = App()
+        self.read_count = Count()
 
     def start(self):
         print("Выберите пункт меню: \n"
@@ -11,6 +15,7 @@ class Start_app:
               "2. Вывести список животных в питомнике.\n"
               "3. Удалить животное.\n"
               "4. Добавить новую команду.\n"
+              "5. Вывести на экран счетчик всех животных(которые когда либо были).\n"
               "9. Выход")
         num = int(input("Ввод: "))
         print()
@@ -29,6 +34,11 @@ class Start_app:
             self.stop()
         elif num == 4:
             self.data.add_new_commands()
+            self.stop()
+        elif num == 5:
+            path = Path("./Documents") / "count.txt"
+            self.read_count.read_count(path)
+            print(f"Всего в питомнике было зарегистрировано: {self.read_count.count} животных.")
             self.stop()
         elif num == 9:
             self.stop()

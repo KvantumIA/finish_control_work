@@ -1,4 +1,4 @@
-from Controller import Start_app
+from Data.Controller import Start_app
 
 
 start = Start_app()
